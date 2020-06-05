@@ -1,0 +1,416 @@
+@import "vars"
+
+
+// ≥1200px
+@media screen and (max-width: 1200px)
+  .container 
+    max-width: 960px
+  
+  // top
+  .top
+    &__wrap
+      min-height: 450px
+
+    &__block
+      &_text
+        width: calc(50% - 20px)
+        padding-bottom: 140px
+        padding-right: 10px
+
+      &_image
+        width: calc(50% + 20px)
+        overflow: visible 
+
+        &::before
+          width: 140%
+
+    &__title
+      font-size: 16px
+
+      &_last
+        margin-bottom: 25px
+        font-size: 18px
+
+    &__subtitle
+      font-size: 24px
+
+      &_last
+        font-size: 22px
+
+    &__item
+      font-size: 20px
+
+    
+// ≥992px
+@media screen and (max-width: 992px)
+  .container
+    max-width: 760px
+    padding: 0 15px
+  
+  // header
+  .header
+    &__line
+      justify-content: center
+
+  // top
+  .top
+    margin-bottom: 0
+
+    &__wrap
+      flex-direction: column
+      height: auto
+
+    &__block
+      &_text
+        width: 100%
+        min-height: 420px
+        padding-right: 0
+        padding-bottom: 150px
+        
+        &::after
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          right: -100%
+          width: 100%
+          height: 100%
+          background-color: #ebf4fd
+
+      &_image
+        order: 3
+        width: 100%
+        min-height: 450px
+        margin-top: -30px
+
+        &::before
+          width: 100%
+          background-position: center
+  
+      &_form
+        width: 580px
+        min-height: 360px
+        margin: 0 auto
+        margin-top: -140px
+        border: 1px solid $accent
+
+    &__title
+      font-size: 17px
+      text-align: center
+      letter-spacing: normal
+
+      &_last
+        margin-bottom: 20px
+        font-size: 20px
+        text-align: left
+
+    &__subtitle
+      font-size: 26px
+      text-align: center
+
+      &_last
+        font-size: 24px
+        text-align: left
+
+    &__notice
+      text-align: center
+
+    &__item
+      font-size: 22px
+
+    &__discount
+      right: -20px
+
+    &__discount
+      top: -40px
+      right: 20px
+      width: 80px
+      min-height: 80px
+
+  .discounts
+    padding: 15px 5px 10px
+
+    &__text
+      margin-bottom: 6px
+      font-size: 10px
+    &__percent
+      margin-left: -16px
+      font-size: 30px
+
+      &::before
+        right: -22px
+        font-size: 30px
+
+  // form
+  .form
+    &__wrap
+      justify-content: space-around
+      flex-wrap: wrap
+
+    &__field
+      width: 46%
+      margin-bottom: 15px
+
+
+    &__btn
+      width: 50%
+
+    &__navigation
+      top: 30px
+      bottom: 40px
+      right: 30px
+
+  // navigation
+  .navigation
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+
+    &__discount
+      width: 90px
+      min-height: 80px
+      margin: 0 auto
+      margin-bottom: auto
+
+    &__slide
+      top: auto
+      left: 50%
+      bottom: 20%
+      transform: translateX(-50%)
+
+  // tab
+  .tab
+    padding: 30px
+
+    &_last
+      padding-bottom: 25px
+
+    &__inner
+      padding-right: 130px
+
+  .radio
+    &__lst
+      flex-wrap: wrap
+      justify-content: space-around
+
+    &__item
+      width: 50%
+      margin-top: 25px
+
+
+// ≥768px
+@media screen and (max-width: 768px)
+  .text-medium
+    font-size: 16px
+
+  .container
+    max-width: 540px
+    padding: 0 10px
+  
+  // header
+  .header
+    &__logo
+      width: 160px
+      
+  // top
+  .top
+    &__block
+      &_text
+        min-height: 420px
+        padding-bottom: 130px
+
+      &_image
+        min-height: 350px
+
+        &::before
+          background-position: center top
+
+      &_form
+        width: 500px
+
+    &__title
+      font-size: 18px
+      
+    &__discount
+      right: -50px
+
+    &__item
+      font-size: 20px
+
+    &__notice
+      font-size: 13px
+
+
+  // form
+  .form
+    &__wrap
+      width: 80%
+      margin: 20px auto
+
+    &__field, &__btn
+      width: 100%
+      padding: 18px
+
+    &__btn
+      padding: 20px
+
+    &__text
+      text-align: center
+
+    &__checkbox
+      display: block
+      margin-top: 12px
+      text-align: center
+
+      &_text
+        text-align: center
+
+    &__notice
+      margin-top: 20px
+
+  .radio
+    &__label
+      font-size: 16px
+
+  // footer
+  .footer
+    &__wrap
+      font-size: 14px
+
+// ≥576px
+@media screen and (max-width: 576px)
+  .container
+    max-width: 320px
+
+  // top
+  .top
+    &__block
+      &_text
+        min-height: 420px
+        padding-top: 30px
+        padding-bottom: 160px
+
+      &_form
+        width: 290px
+
+      &_image
+        min-height: 240px
+        margin-top: -20px
+        &::before
+          width: 120%
+          left: 50%
+          transform: translateX(-50%)
+
+    &__title
+      margin-bottom: 25px
+      font-size: 15px
+
+      &_last
+        margin-bottom: 20px
+        br
+          display: block
+
+    &__subtitle
+      margin-bottom: 30px
+      font-size: 20px
+      
+      &_last
+        margin-bottom: 15px
+        font-size: 18px
+
+    &__notice
+      margin-top: 0
+      font-size: 14px
+
+    &__item
+      margin-bottom: 5px
+      font-size: 18px
+      line-height: 1.1
+
+      &::before
+        top: -1px
+        width: 20px
+        height: 20px
+        background-size: 11px
+
+    &__discount
+      top: 20px
+      right: 15px
+
+  .discounts
+    margin-left: 0
+
+  // form
+  .form
+
+    &__title
+      font-size: 16px
+      text-align: center
+    &__wrap
+      width: 100%
+      margin: 30px auto
+    &__field
+      margin-bottom: 10px
+    &__btn
+      font-size: 17px
+    &__text
+      font-size: 14px
+      line-height: 1
+    &__checkbox
+      line-height: 1
+
+    &__navigation
+      bottom: 20px
+      top: auto
+      left: 30px
+      right: 30px
+
+  // navigation
+  .navigation
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    width: auto
+
+    &__discount
+      width: 100px
+      height: 100px
+      padding: 20px 5px
+      
+      .discounts__text
+        font-size: 12px
+      .discounts__percent
+        font-size: 36px
+
+    &__next
+      width: auto
+    
+    &__slide
+      left: auto
+      right: 35px
+      bottom: 0
+      font-size: 16px
+      transform: translateX(0)
+
+  // tab
+  .tab
+    min-height: 520px
+    padding: 25px 20px
+
+    &__inner
+      padding-right: 0
+      padding-bottom: 110px
+
+  .radio
+    &__item
+      margin-top: 20px
+
+    &__label
+      &_text
+        min-height: 77px
+        margin-bottom: 20px
+        padding-top: 40px
+        font-size: 15px
+        line-height: 1.2
+        span
+          top: 15px
